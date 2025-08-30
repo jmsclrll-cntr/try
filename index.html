@@ -11,28 +11,39 @@
   <header>
     <h1>My Modern Website</h1>
     <p>Clean & Responsive Design</p>
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
   </header>
 
   <nav>
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+      <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
     </ul>
   </nav>
 
   <section class="hero" id="home">
-    <h1>Welcome to My Website</h1>
-    <p>Beautifully designed with HTML, CSS, and JavaScript</p>
-    <button onclick="changeText()">Click Me</button>
+    <div class="hero-content">
+      <h1>Welcome to My Website</h1>
+      <p>Beautifully designed with modern CSS features and animations</p>
+      <button onclick="changeText()"><i class="fas fa-magic"></i> Click Me</button>
+    </div>
   </section>
 
   <section class="content" id="about">
-    <h2>About This Website</h2>
-    <p>This is a simple modern website template. It is fully responsive and easy to customize. You can use it for portfolios, personal projects, or small businesses.</p>
+    <h2>About This <span class="text-gradient">Website</span></h2>
+    <p>This is a modern website template featuring the latest CSS techniques including custom properties, flexbox, CSS grid, smooth animations, and a fully responsive design. It's perfect for portfolios, personal projects, or small businesses.</p>
+    <p>With its clean aesthetic and attention to detail, this template provides an excellent foundation for your next web project.</p>
   </section>
 
-  <footer>
+  <footer id="contact">
+    <div class="social-links">
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </div>
     <p>© 2025 My Modern Website | All Rights Reserved</p>
   </footer>
 
