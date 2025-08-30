@@ -3,45 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modern Website</title>
+  <title>Nexus | Futuristic Web Experience</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="cyber-grid"></div>
+  <div class="particles-container" id="particles-js"></div>
+  
+  <div class="cyber-loader">
+    <div class="cyber-loader-inner">
+      <div class="loader-line"></div>
+      <div class="loader-line"></div>
+      <div class="loader-line"></div>
+      <div class="loader-text">SYSTEM INITIALIZING</div>
+    </div>
+  </div>
 
-  <header>
-    <h1>My Modern Website</h1>
-    <p>Clean & Responsive Design</p>
-    <div class="floating-shape shape-1"></div>
-    <div class="floating-shape shape-2"></div>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
-      <li><a href="#social"><i class="fas fa-hashtag"></i> Social</a></li>
-      <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-    </ul>
+  <nav class="cyber-nav">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="glitch" data-text="NEXUS">NEXUS</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link"><i class="fas fa-terminal"></i> <span>Home</span></a></li>
+        <li><a href="#about" class="nav-link"><i class="fas fa-code"></i> <span>About</span></a></li>
+        <li><a href="#social" class="nav-link"><i class="fas fa-network-wired"></i> <span>Network</span></a></li>
+        <li><a href="#contact" class="nav-link"><i class="fas fa-transmitter"></i> <span>Connect</span></a></li>
+      </ul>
+      <div class="nav-hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
   </nav>
 
-  <section class="hero" id="home">
+  <header id="home">
+    <div class="header-content">
+      <h1 class="cyber-glitch" data-text="NEXUS DIGITAL">NEXUS DIGITAL</h1>
+      <p>Next Generation Web Experience</p>
+      <div class="cyber-scroll-indicator">
+        <span>SCROLL TO ENTER</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+    <div class="floating-shape shape-3"></div>
+  </header>
+
+  <section class="hero" id="hero">
     <div class="hero-content">
-      <h1>Welcome to My Website</h1>
-      <p>Beautifully designed with modern CSS features and animations</p>
-      <button onclick="changeText()"><i class="fas fa-magic"></i> Click Me</button>
+      <h1 id="cyber-text">WELCOME TO THE NEXUS</h1>
+      <p>Immersive digital experience powered by advanced technology</p>
+      <div class="cyber-button-group">
+        <button class="cyber-button" onclick="changeText()">
+          <i class="fas fa-bolt"></i> TRANSFORM
+        </button>
+        <button class="cyber-button" onclick="activateParticles()">
+          <i class="fas fa-atom"></i> ACTIVATE
+        </button>
+        <button class="cyber-button" onclick="toggleAudio()">
+          <i class="fas fa-music"></i> SOUND: <span id="sound-status">ON</span>
+        </button>
+      </div>
     </div>
   </section>
 
   <section class="content" id="about">
-    <h2>About This <span class="text-gradient">Website</span></h2>
-    <p>This is a modern website template featuring the latest CSS techniques including custom properties, flexbox, CSS grid, smooth animations, and a fully responsive design. It's perfect for portfolios, personal projects, or small businesses.</p>
-    <p>With its clean aesthetic and attention to detail, this template provides an excellent foundation for your next web project.</p>
+    <h2>About This <span class="text-gradient">Digital Nexus</span></h2>
+    <p>This is a next-generation web experience featuring cyberpunk aesthetics, advanced particle animations, interactive elements, and a fully immersive design. Built with cutting-edge CSS techniques and JavaScript functionality.</p>
+    <p>The interface responds to user interaction with dynamic visual feedback, creating a truly futuristic browsing experience.</p>
+    
+    <div class="cyber-stats">
+      <div class="stat">
+        <div class="stat-number" id="stat1" data-target="100">0</div>
+        <div class="stat-label">Immersion Level</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number" id="stat2" data-target="87">0</div>
+        <div class="stat-label">Tech Efficiency</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number" id="stat3" data-target="63">0</div>
+        <div class="stat-label">Data Flow</div>
+      </div>
+    </div>
   </section>
 
   <section class="social-section" id="social">
     <div class="social-container">
-      <h2>Our <span class="text-gradient">Social Media</span></h2>
-      <p>Connect with us on these platforms</p>
+      <h2>Our <span class="text-gradient">Digital Network</span></h2>
+      <p>Connect with our neural network across these platforms</p>
       
       <div class="social-grid">
         <div class="social-card facebook">
@@ -49,8 +106,8 @@
             <i class="fab fa-facebook-f"></i>
           </div>
           <h3>Facebook</h3>
-          <p>Follow us on Facebook for updates and community discussions.</p>
-          <a href="#" class="social-link">Follow Us <i class="fas fa-arrow-right"></i></a>
+          <p>Join our neural network for updates and community discussions.</p>
+          <a href="#" class="social-link">Connect <i class="fas fa-arrow-right"></i></a>
         </div>
         
         <div class="social-card twitter">
@@ -58,8 +115,8 @@
             <i class="fab fa-twitter"></i>
           </div>
           <h3>Twitter</h3>
-          <p>Get the latest news and updates from our Twitter feed.</p>
-          <a href="#" class="social-link">Follow Us <i class="fas fa-arrow-right"></i></a>
+          <p>Receive real-time data stream from our Twitter feed.</p>
+          <a href="#" class="social-link">Connect <i class="fas fa-arrow-right"></i></a>
         </div>
         
         <div class="social-card instagram">
@@ -67,8 +124,8 @@
             <i class="fab fa-instagram"></i>
           </div>
           <h3>Instagram</h3>
-          <p>Check out our visual stories and behind-the-scenes content.</p>
-          <a href="#" class="social-link">Follow Us <i class="fas fa-arrow-right"></i></a>
+          <p>Access our visual data repository and behind-the-scenes content.</p>
+          <a href="#" class="social-link">Connect <i class="fas fa-arrow-right"></i></a>
         </div>
         
         <div class="social-card youtube">
@@ -76,7 +133,7 @@
             <i class="fab fa-youtube"></i>
           </div>
           <h3>YouTube</h3>
-          <p>Watch our tutorials, product demos, and event recordings.</p>
+          <p>View our technical briefings, demonstrations, and mission logs.</p>
           <a href="#" class="social-link">Subscribe <i class="fas fa-arrow-right"></i></a>
         </div>
         
@@ -85,8 +142,8 @@
             <i class="fab fa-linkedin-in"></i>
           </div>
           <h3>LinkedIn</h3>
-          <p>Connect with us professionally and explore career opportunities.</p>
-          <a href="#" class="social-link">Follow Us <i class="fas fa-arrow-right"></i></a>
+          <p>Connect with our AI core and explore integration opportunities.</p>
+          <a href="#" class="social-link">Connect <i class="fas fa-arrow-right"></i></a>
         </div>
         
         <div class="social-card github">
@@ -94,26 +151,76 @@
             <i class="fab fa-github"></i>
           </div>
           <h3>GitHub</h3>
-          <p>Explore our open-source projects and contribute to our codebase.</p>
+          <p>Access our source code repository and contribute to our development.</p>
           <a href="#" class="social-link">View Repos <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
     </div>
   </section>
 
-  <footer id="contact">
-    <div class="social-links">
-      <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
-      <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
-      <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
-      <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
-      <a href="#" class="github"><i class="fab fa-github"></i></a>
+  <section class="cyber-terminal">
+    <div class="terminal-container">
+      <div class="terminal-header">
+        <div class="terminal-buttons">
+          <span class="terminal-btn terminal-close"></span>
+          <span class="terminal-btn terminal-minimize"></span>
+          <span class="terminal-btn terminal-expand"></span>
+        </div>
+        <div class="terminal-title">nexus://system/terminal</div>
+      </div>
+      <div class="terminal-body" id="terminal-output">
+        <div>> System initialized</div>
+        <div>> Loading Nexus interface</div>
+        <div>> Connection established</div>
+      </div>
+      <div class="terminal-input">
+        <span class="terminal-prompt">nexus@user:~$</span>
+        <input type="text" id="terminal-input" autocomplete="off">
+      </div>
     </div>
-    <p>© 2025 My Modern Website | All Rights Reserved</p>
+  </section>
+
+  <footer id="contact">
+    <div class="cyber-footer">
+      <div class="footer-grid">
+        <div class="footer-section">
+          <h3>NEXUS SYSTEMS</h3>
+          <p>Advanced digital experiences powered by cutting-edge technology</p>
+        </div>
+        <div class="footer-section">
+          <h3>NAVIGATION</h3>
+          <ul>
+            <li><a href="#home">Home Sector</a></li>
+            <li><a href="#about">Data Repository</a></li>
+            <li><a href="#social">Network Access</a></li>
+            <li><a href="#contact">Transmission Hub</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>CONNECT</h3>
+          <div class="social-links">
+            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="github"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 NEXUS DIGITAL SYSTEMS | All Rights Reserved</p>
+        <div class="cyber-line"></div>
+        <p>System Status: <span class="online-indicator">ONLINE</span></p>
+      </div>
+    </div>
   </footer>
 
+  <audio id="bgAudio" loop>
+    <source src="https://assets.mixkit.co/music/preview/mixkit-tech-house-vibes-130.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
-
