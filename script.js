@@ -1,4 +1,4 @@
- function changeText() {
+  function changeText() {
       const heroText = document.querySelector('.hero h1');
       if (heroText.textContent === "Welcome to My Website") {
         heroText.textContent = "Have a Great Day!";
