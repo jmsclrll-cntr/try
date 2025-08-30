@@ -1,4 +1,4 @@
- /* CSS Variables for consistent theming */
+    /* CSS Variables for consistent theming */
     :root {
       --primary: #4361ee;
       --primary-dark: #3a56d4;
@@ -221,13 +221,93 @@
       border-radius: 2px;
     }
 
+    /* Social Media Section */
+    .social-section {
+      background: linear-gradient(to right, #f8f9fa, #e9ecef);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    
+    .social-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .social-card {
+      background: white;
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .social-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    }
+    
+    .social-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      color: white;
+    }
+    
+    .facebook { background: linear-gradient(45deg, #1877f2, #166fe5); }
+    .twitter { background: linear-gradient(45deg, #1da1f2, #1a91da); }
+    .instagram { background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d); }
+    .youtube { background: linear-gradient(45deg, #ff0000, #e60000); }
+    .linkedin { background: linear-gradient(45deg, #0077b5, #00669c); }
+    .github { background: linear-gradient(45deg, #333333, #24292e); }
+    
+    .social-card h3 {
+      margin-bottom: 1rem;
+    }
+    
+    .social-card p {
+      color: var(--gray);
+      margin-bottom: 1.5rem;
+    }
+    
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: auto;
+    }
+    
+    .social-link i {
+      margin-left: 0.5rem;
+      transition: var(--transition);
+    }
+    
+    .social-link:hover i {
+      transform: translateX(5px);
+    }
+
     /* Footer */
     footer {
       background: var(--dark);
       color: white;
       padding: 3rem 2rem;
       text-align: center;
-      margin-top: 5rem;
     }
 
     .social-links {
@@ -250,9 +330,15 @@
     }
 
     .social-links a:hover {
-      background: var(--primary);
       transform: translateY(-3px);
     }
+    
+    .social-links a.facebook:hover { background: #1877f2; }
+    .social-links a.twitter:hover { background: #1da1f2; }
+    .social-links a.instagram:hover { background: #e1306c; }
+    .social-links a.youtube:hover { background: #ff0000; }
+    .social-links a.linkedin:hover { background: #0077b5; }
+    .social-links a.github:hover { background: #333333; }
 
     /* Animations */
     @keyframes fadeIn {
@@ -283,6 +369,10 @@
       
       .content {
         padding: 3rem 1.5rem;
+      }
+      
+      .social-grid {
+        grid-template-columns: 1fr;
       }
     }
 
