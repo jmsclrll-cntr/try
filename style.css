@@ -173,7 +173,7 @@ header {
   animation: glitch-effect 2s infinite;
 }
 
-.cyber-glitch::before,
+/* .cyber-glitch::before,
 .cyber-glitch::after {
   content: attr(data-text);
   position: absolute;
@@ -193,7 +193,7 @@ header {
   animation: glitch 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
   color: var(--accent);
   z-index: -2;
-}
+} */
 
 @keyframes glitch-effect {
   0%, 100% { transform: translate(0); }
@@ -269,7 +269,7 @@ header {
   color: var(--primary);
   text-shadow: 0 0 10px var(--primary);
 }
-
+/* 
 .glitch {
   position: relative;
   display: inline-block;
@@ -284,7 +284,7 @@ header {
   width: 100%;
   height: 100%;
   opacity: 0.8;
-}
+} */
 
 .glitch::before {
   color: var(--secondary);
@@ -527,7 +527,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.03;
+  opacity: 0.3;
   z-index: -1;
   background-size: 200px;
   background-position: center;
